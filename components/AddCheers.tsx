@@ -93,7 +93,7 @@ export default function AddCheers() {
 					const dataURL = canvas.toDataURL('image/png')
 					const a = document.createElement('a')
 					a.href = dataURL
-					a.download = `higherpilled-${Date.now()}.png`
+					a.download = `cheerspilled-${Date.now()}.png`
 					a.click()
 				}}>
 					Download Image
