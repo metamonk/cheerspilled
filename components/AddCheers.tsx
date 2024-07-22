@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button"
 
 export default function AddCheers() {
   const [image, setImage] = useState<HTMLImageElement | null>(null)
-  const [offsetX, setOffsetX] = useState(38)
-  const [offsetY, setOffsetY] = useState(60)
-  const [scale, setScale] = useState(0.07)
+  const [offsetX, setOffsetX] = useState(0)
+  const [offsetY, setOffsetY] = useState(160)
+  const [scale, setScale] = useState(0.35)
   const [offsetTheta, setOffsetTheta] = useState(0)
   const [imgWidth, setImgWidth] = useState(0)
   const [imgHeight, setImgHeight] = useState(0)
@@ -50,9 +50,9 @@ export default function AddCheers() {
 						img.src = reader.result
 					}
 					img.onload = () => {
-						setOffsetX(38)
-						setOffsetY(60)
-						setScale(0.07)
+						setOffsetX(0)
+						setOffsetY(160)
+						setScale(0.35)
 						setOffsetTheta(0)
 						setImgWidth(img.width)
 						setImgHeight(img.height)
