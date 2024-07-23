@@ -12,7 +12,7 @@ export default function AddCheers() {
   const [imgWidth, setImgWidth] = useState(0)
   const [imgHeight, setImgHeight] = useState(0)
 
-  const raiseAGlass = '/images/cheers.png'
+  const chadEyes = '/images/eyes.png'
 
   useEffect(() => {
     const canvas = document.getElementById('canvas') as HTMLCanvasElement
@@ -25,7 +25,7 @@ export default function AddCheers() {
         context.clearRect(0, 0, canvas.width, canvas.height)
         context.drawImage(image, 0, 0, image.width, image.height)
         const download = new Image()
-        download.src = raiseAGlass
+        download.src = chadEyes
 
         download.onload = () => {
           context.translate(offsetX, offsetY)
@@ -92,7 +92,7 @@ export default function AddCheers() {
 					const dataURL = canvas.toDataURL('image/png')
 					const a = document.createElement('a')
 					a.href = dataURL
-					a.download = `cheerspilled-${Date.now()}.png`
+					a.download = `cheerschad-${Date.now()}.png`
 					a.click()
 				}}>
 					Download Image
